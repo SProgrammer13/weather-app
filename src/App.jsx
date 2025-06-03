@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import SearchBar from './assets/components/SearchBar'
+import DisplayedWeather from './assets/components/Displayed';
 
 function App() {
   function weatherSearch(city){
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
     <SearchBar weatherSearch = {weatherSearch}></SearchBar>
+    <DisplayedWeather></DisplayedWeather>
     </>
   )
 }
