@@ -16,7 +16,7 @@ function App() {
      setWeather(data)
     }
     else {
-      console.log("This city doesn't exist!")
+      alert("This city doesn't exist! Try again.")
       setWeather(null)
     }
 

@@ -37,7 +37,30 @@ header {
   background-color: cornflowerblue;
 }
 
-/* .city-name {
-  color: aliceblue;
+.enter {
+  display: flex;
+  justify-content: center;
+}
 
-} */
+.displayed-weather {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.city-name {
+  background-color: aliceblue;
+  padding: 5px 15px;
+  font-size: 30px;
+  font-weight: 550;
+}
+
+.forecast {
+  background-color: rgb(141, 209, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  font-size: 20px;
+  font-weight: 400;
+}
