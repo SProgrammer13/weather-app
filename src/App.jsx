@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import SearchBar from './assets/components/SearchBar'
+import Forecast from './assets/components/Forecast';
 import DisplayedWeather from './assets/components/Displayed';
-import { use } from 'react';
 
 const apiKey = '48926b83330ccdf2c48aaf7a642e4e78';
 
@@ -39,6 +39,7 @@ function App() {
     <>
       <SearchBar weatherSearch={weatherSearch}></SearchBar>
       <DisplayedWeather weather={weather}></DisplayedWeather>
+      <Forecast forecastData={forecast}></Forecast>
     </>
   )
 }
