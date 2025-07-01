@@ -14,7 +14,8 @@ function Forecast({forecastData}){
 
     console.log(daysForecast)
     return (
-        <div className="forecast">
+        <div className="forecast-future">
+            <p className="txt-forecast">Weather forecast:</p>
             {Object.keys(daysForecast).map(date =>{
                 const weekday = new Date(date).toLocaleDateString('uk-UA', {weekday: "short"});
                 return (
