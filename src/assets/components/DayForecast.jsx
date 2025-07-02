@@ -8,7 +8,9 @@ function DayForecast({forecastList}){
             <div className="day-times">
                 {forecastList.map(item => (
                         <div className="time-period">
-                            {new Date(item.dt * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                            <div>
+                             {new Date(item.dt * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                            </div>
                         </div>
                 
                     )
