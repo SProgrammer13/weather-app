@@ -1,3 +1,7 @@
+import DayForecast from "./DayForecast";
+import { useState } from "react";
+import { useEffect } from "react";
+
 
 function Forecast({forecastData}){
     if(!forecastData) return (<></>)
@@ -13,18 +17,25 @@ function Forecast({forecastData}){
     });
 
     console.log(daysForecast)
+    const [currentDayWeather, setCurrentDayWeather] = useState(null);
+    useEffect(() => {
+        setCurrentDayWeather(daysForecast[Object.keys(daysForecast)[0]])
+    }, [daysForecast])
+
     return (
         <div className="forecast-future">
-            <p className="txt-forecast">Weather forecast:</p>
+        <div className="days-row">
             {Object.keys(daysForecast).map(date =>{
                 const weekday = new Date(date).toLocaleDateString('uk-UA', {weekday: "short"});
                 return (
                     <div key={date} className="day-weather">
-                        <h2>{weekday}</h2>
+                        <button className="day-btn">{weekday}</button>
                     </div>
                 )
             })}
         </div>
+        <DayForecast forecastList={currentDayWeather}></DayForecast>
+    </div>
     )
 }
 

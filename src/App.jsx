@@ -38,8 +38,10 @@ function App() {
   return (
     <>
       <SearchBar weatherSearch={weatherSearch}></SearchBar>
-      <DisplayedWeather weather={weather}></DisplayedWeather>
-      <Forecast forecastData={forecast}></Forecast>
+      <div className="weather-section">
+        <DisplayedWeather weather={weather}></DisplayedWeather>
+        <Forecast forecastData={forecast}></Forecast>
+      </div>
     </>
   )
 }
