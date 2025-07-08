@@ -108,3 +108,13 @@ header {
   justify-content: space-around;
   margin-top: 20px;
 }
+
+.forecast-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.info {
+  margin: 25px 0;
+  font-size: 20px;
+}

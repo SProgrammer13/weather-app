@@ -8,20 +8,25 @@ function DayForecast({forecastList}){
             <div className="day-times">
                 {forecastList.map(item => (
                         <div className="time-period">
-                            <img src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
-                            <div>
+                            <img className='info' src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
+                        <div className="forecast-info">
+                            <div className="info">
                              {new Date(item.dt * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                             </div>
-                            <div>
+                            <div className="info">
                                 {item.main.temp}°C
                             </div>
-                            <div>
+                            <div className="info">
                                 {item.wind.speed}m/s
                             </div>
-                            <div>
-                                Humidity:{item.main.humidity}%
+                            <div className="info">
+                                {item.main.humidity}%
+                            </div>
+                             <div className="info">
+                                {Math.round(item.main.pressure * 0.7500615758)}mm
                             </div>
                         </div>
+                    </div>
                 
                     )
                 )}
