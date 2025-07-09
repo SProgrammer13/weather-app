@@ -6,10 +6,9 @@ function DayForecast({forecastList}){
     return (
         <div className="day-forecast">
             <div className="day-times">
-                {forecastList.map(item => (
-                        <div className="time-period">
-                            <img className='info' src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
-                        <div className="forecast-info">
+                {forecastList.map((item, index) => (
+                        <div className="time-period" key={index}>
+                            <img className='info icon' src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
                             <div className="info">
                              {new Date(item.dt * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                             </div>
@@ -24,7 +23,6 @@ function DayForecast({forecastList}){
                             </div>
                              <div className="info">
                                 {Math.round(item.main.pressure * 0.7500615758)}mm
-                            </div>
                         </div>
                     </div>
                 

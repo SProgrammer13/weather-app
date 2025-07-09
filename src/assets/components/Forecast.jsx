@@ -16,25 +16,26 @@ function Forecast({forecastData}){
 
     });
 
-    console.log(daysForecast)
-    const [currentDayWeather, setCurrentDayWeather] = useState(null);
+   
+    const [currentDay, setcurrentDay] = useState(null);
     useEffect(() => {
-        setCurrentDayWeather(daysForecast[Object.keys(daysForecast)[0]])
-    }, [daysForecast])
+        setcurrentDay(Object.keys(daysForecast)[0])
+    }, [forecastData])
 
     return (
         <div className="forecast-future">
         <div className="days-row">
             {Object.keys(daysForecast).map(date =>{
                 const weekday = new Date(date).toLocaleDateString('uk-UA', {weekday: "short"});
+                
                 return (
                     <div key={date} className="day-weather">
-                        <button className="day-btn">{weekday}</button>
+                        <button onClick={()=> setcurrentDay(date)} className={`day-btn ${currentDay == date ? 'active': ''}`}>{weekday}</button>
                     </div>
                 )
             })}
         </div>
-        <DayForecast forecastList={currentDayWeather}></DayForecast>
+        <DayForecast forecastList={daysForecast[currentDay]}></DayForecast>
     </div>
     )
 }
