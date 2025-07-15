@@ -1,9 +1,14 @@
+
 #root {
   max-width: 1200px;
   margin: 0 auto;
+ 
 }
 
 body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
   background-color: antiquewhite;
 }
 
@@ -11,16 +16,15 @@ body {
   display: flex;
   justify-content: center;
   margin: 25px 0;
+   gap: 7px;
 }
 
 input {
-  padding: 0 50px;
-  margin: 5px;
+  padding: 10px 150px;
 }
 
 .srch-btn {
-   padding: 10px 20px;
- 
+  padding: 10px 50px;
 }
 
 header {
@@ -46,6 +50,11 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.sunrise-sunset {
+  display: flex;
+  align-items: center;
 }
 
 .city-name {
