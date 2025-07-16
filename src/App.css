@@ -1,14 +1,20 @@
 
 #root {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
  
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
 }
 
 .search-bar {
@@ -19,24 +25,27 @@ body {
 }
 
 input {
-  padding: 10px 150px;
+  padding: 10px;
 }
 
 .srch-btn {
   padding: 10px 50px;
+  background-color: rgb(141, 209, 255);
+  border-radius: 5px;
 }
 
 header {
+  text-align: center;
   margin: 0;
   width: 100%;
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
   letter-spacing: 1.5em;
   color: #ffffff;
-  height: 50px;
+  padding: 20px;
   background-color: cornflowerblue;
 }
 
@@ -86,6 +95,7 @@ header {
   background-color: rgb(175, 230, 255);
   padding: 30px;
   border: 2px solid rgb(122, 192, 224);
+  overflow-x: hidden;
   
 }
 
@@ -120,12 +130,15 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow-x: auto;
+  gap: 10px;
 }
 
 .day-times {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  padding: 7px;
 }
 
 .info {
@@ -148,6 +161,10 @@ header {
 .day-forecast {
   display: flex;
   justify-content: center;
+  flex-grow: 1;
+  overflow-x: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .temp {
@@ -156,4 +173,24 @@ header {
 
 .city-weather {
   font-weight: 600;
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 576px) and (max-width: 991px) {
+  .weather-section {
+    flex-wrap: wrap;
+  }
+  header {
+    padding: 10px;
+    letter-spacing: 0.5em;
+  }
+  .srch-btn {
+    padding: 10px;
+  }
+  .forecast-future {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
