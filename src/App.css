@@ -20,11 +20,14 @@ body {
 .search-bar {
   display: flex;
   justify-content: center;
-  margin: 25px 0;
+  margin: 25px auto;
    gap: 7px;
+    max-width: 600px;
+    padding: 0 1em;
 }
 
-input {
+.search-bar input {
+  width: 100%;
   padding: 10px;
 }
 
@@ -160,7 +163,7 @@ header {
 
 .day-forecast {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-grow: 1;
   overflow-x: auto;
   padding-top: 30px;
@@ -190,7 +193,7 @@ header {
     padding: 10px;
   }
   .forecast-future {
-    padding-left: 0;
+    padding: 2em 0;
     margin-left: 0;
   }
 }
